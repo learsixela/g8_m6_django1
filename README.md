@@ -1,20 +1,31 @@
 # grupo 8 modulo 6 django
-## Introduccion a DJANGO
 
-## Paso 1: Crear entorno virtual:
-**python3 -m venv nombre_entorno**
 
-## Paso 2: Activar entorno 
-### Windows 
-#### (cmd)
-**call vdjango\Scripts\activate**
-#### (git bash) 
-**source mi-proyecto-django /Scripts/activate** 
+## Introducción a DJANGO
 
-### Mac
+Paso 1: Crear entorno virtual:
+```bash
+python3 -m venv nombre_entorno
+```
 
-#### (bash o fish)
-**source mi-proyecto-django/bin/activate.fish**
+Paso 2: Activar entorno 
+**Windows** 
+*(cmd)*
+```bash
+call nombre_entorno\Scripts\activate
+```
+*(git bash)*
+```bash
+source nombre_entorno/Scripts/activate 
+```
 
-#### (zsh) 
-**source vdjango/bin/activate** 
+**Mac**
+
+*(bash o fish)*
+```bash
+source nombre_entorno/bin/activate.fish
+```
+*(zsh) *
+```bash
+source vdjango/bin/activate
+``` 
