@@ -28,5 +28,31 @@ source nombre_entorno/bin/activate.fish
 ```
 *(zsh) *
 ```bash
-source vdjango/bin/activate
+source nombre_entorno/bin/activate
 ``` 
+
+Paso 3: Instalar DJango en el entorno virtual creado 
+*en windows usar **pip** y en mac usar **pip3*** 
+
+```bash
+pip3 install django
+```
+
+Paso 4: Crear el proyecto
+```bash
+django-admin startproject nombre_proyecto
+```
+Paso 5: Acceder al proyecto:
+```bash
+cd nombre_proyecto
+```
+
+Paso 6: Agregar app al proyecto
+```bash
+python3 manage.py startapp nombre_proyecto
+```
+
+Paso 7: Vincular app al proyecto con el nombre de la app 
+    INSTALLED_APPS=[
+    'nombre_app',
+    … ]
