@@ -10,6 +10,7 @@ python3 -m venv nombre_entorno
 
 Paso 2: Activar entorno 
 **Windows** 
+
 *(cmd)*
 ```bash
 call nombre_entorno\Scripts\activate
