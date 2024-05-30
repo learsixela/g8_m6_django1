@@ -10,6 +10,3 @@ def mis_mascotas(request):
                 <img src="" alt="Ayun">
                 <img src="" alt="Negrito">
         """)
-
-def about(request):
-        return render(request,"about.html")

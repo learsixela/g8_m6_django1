@@ -17,15 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from holamundo.views import hola,test,home, contact
+from homeApp.views import about,index
 from mascotas import views
 #from . import views
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    #path('',hola),
-    path('',home),
-    path('about/', views.about),
+    path('admin/', admin.site.urls),
+
+    path('',index),
+    path('about/',about),
     path('contact/', contact),
 	path('test/',test),
-    path('mascotas/', views.mis_mascotas)
+    path('mascotas/', views.mis_mascotas),
+    path('hola/',hola),
 ]
