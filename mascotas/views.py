@@ -1,12 +1,21 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def mis_mascotas(request):
-        return HttpResponse("""
-                <h1>Mis Mascotas</h1>
-                <p>Zoe, Ayun y Negrito</p>
-                <img src="" alt="Zoe">
-                <img src="" alt="Ayun">
-                <img src="" alt="Negrito">
-        """)
+        context = {
+                "mascota1":"Zoe",
+                "mascota2":"Ayun",
+                "mascota3":"Negrito",
+                "lista_mascotas": ["Zoe2", "Ayun2", "Negrito2"],
+                "id": 0,
+                "fecha": "2024/05/30"
+        }
+        return render(request,"mascotas.html",context)
+
+
+def mascotas_id(request,id):
+        print("el valor del id es",id)
+        context = {
+                "id":id
+        }
+        return render(request,"mascotas.html",context)

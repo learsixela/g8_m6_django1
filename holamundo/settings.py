@@ -27,12 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# settings.py
+APPEND_SLASH = False
 
 # Application definition
 
 INSTALLED_APPS = [
-    #'mascotas.apps.MascotasConfig',
-    'mascotas',
     'homeApp',
     'django.contrib.admin',
     'django.contrib.auth',
