@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 
 # Create your views here.
 def about(request):
@@ -80,12 +81,23 @@ def contact(request):
 
 def login(request):
     if request.method =="GET":
-            print("Estoy en login get")
-            return render(request,"login.html")
+        print("Estoy en login get")
+        return render(request,"login.html")
     
     if request.method =="POST":
-            print("Estoy en login post")
-            return redirect("/")
+        print("Estoy en login post")
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        print("USER ******",user)
+        if user is not None:
+            print(user)
+            request.session["username"]= username
+            return redirect("/about")
+        else:
+            print(user)
+            return redirect("/registro")
+        
         
 def registro(request):
     if request.method == "GET":
@@ -104,11 +116,7 @@ def registro(request):
         user.first_name = first_name
         user.last_name = last_name
         user.save()
-
-        context = {
-            "email":request.POST['email'],
-        }
-
-        request.session["email"]= request.POST['email']
-
-        return render(request,"index.html",context)
+        return redirect("/login")
+    
+def logout(request):
+    pass

@@ -34,6 +34,7 @@ urlpatterns = [
     path('contact', views.contact),
     path('login', views.login, name='login'),
     path('registro', views.registro, name='registro'),
+    path('logout', views.logout, name='logout'),
 
     #Mascotas
     #path('mascotas/', mis_mascotas),  #https://localhost:8000/mascotas

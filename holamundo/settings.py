@@ -34,6 +34,7 @@ APPEND_SLASH = False
 
 INSTALLED_APPS = [
     'homeApp',
+    'mascotas',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
